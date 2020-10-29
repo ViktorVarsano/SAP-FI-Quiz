@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qyn-Zg-acQ">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Base View Controller-->
+        <scene sceneID="AVl-bJ-2tv">
+            <objects>
+                <viewController id="aP6-93-Fgg" customClass="VVBaseViewController" customModule="SAP_FI_Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EMn-zS-FLv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KND-8b-dyF" customClass="VVAuthTextField" customModule="SAP_FI_Quiz" customModuleProvider="target">
+                                <rect key="frame" x="30" y="188" width="354" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="XUl-f1-DjL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cdm-62-yVk" customClass="VVAuthTextField" customModule="SAP_FI_Quiz" customModuleProvider="target">
+                                <rect key="frame" x="30" y="268" width="354" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="kyC-TZ-Z36"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="swq-Qt-0ub" customClass="VVButton" customModule="SAP_FI_Quiz" customModuleProvider="target">
+                                <rect key="frame" x="186" y="712" width="42" height="30"/>
+                                <state key="normal" title=" Login"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ndb-RG-lCC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KND-8b-dyF" firstAttribute="top" secondItem="ndb-RG-lCC" secondAttribute="top" constant="100" id="2sz-8s-LMD"/>
+                            <constraint firstItem="swq-Qt-0ub" firstAttribute="centerX" secondItem="EMn-zS-FLv" secondAttribute="centerX" id="960-yO-f51"/>
+                            <constraint firstItem="KND-8b-dyF" firstAttribute="leading" secondItem="ndb-RG-lCC" secondAttribute="leading" constant="30" id="BcD-7k-ANt"/>
+                            <constraint firstItem="ndb-RG-lCC" firstAttribute="trailing" secondItem="Cdm-62-yVk" secondAttribute="trailing" constant="30" id="EDv-Cf-EQK"/>
+                            <constraint firstItem="swq-Qt-0ub" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ndb-RG-lCC" secondAttribute="leading" id="OqJ-TJ-c5C"/>
+                            <constraint firstItem="ndb-RG-lCC" firstAttribute="bottom" secondItem="swq-Qt-0ub" secondAttribute="bottom" constant="120" id="ScV-au-7nA"/>
+                            <constraint firstItem="ndb-RG-lCC" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="swq-Qt-0ub" secondAttribute="trailing" id="Xhu-kC-AaO"/>
+                            <constraint firstItem="ndb-RG-lCC" firstAttribute="trailing" secondItem="KND-8b-dyF" secondAttribute="trailing" constant="30" id="aBM-tA-zVD"/>
+                            <constraint firstItem="Cdm-62-yVk" firstAttribute="leading" secondItem="ndb-RG-lCC" secondAttribute="leading" constant="30" id="ttn-Dk-QMt"/>
+                            <constraint firstItem="Cdm-62-yVk" firstAttribute="top" secondItem="KND-8b-dyF" secondAttribute="bottom" constant="30" id="vrI-2T-Nus"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="z03-zT-bEl"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y73-bz-nrX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1131.8840579710145" y="75.669642857142847"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="aCz-TW-8ww">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qyn-Zg-acQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="onZ-7g-Jyg">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="aP6-93-Fgg" kind="relationship" relationship="rootViewController" id="pqw-Bd-eFt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="za9-44-id1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="221.73913043478262" y="75.669642857142847"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

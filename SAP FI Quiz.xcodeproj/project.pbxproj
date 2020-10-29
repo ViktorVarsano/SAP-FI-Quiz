@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		D949E16E23FBFF7E0039D67B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D949E16D23FBFF7E0039D67B /* AppDelegate.swift */; };
 		D949E17023FBFF7E0039D67B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D949E16F23FBFF7E0039D67B /* SceneDelegate.swift */; };
-		D949E17223FBFF7E0039D67B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D949E17123FBFF7E0039D67B /* ViewController.swift */; };
+		D949E17223FBFF7E0039D67B /* VVBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D949E17123FBFF7E0039D67B /* VVBaseViewController.swift */; };
 		D949E17523FBFF7E0039D67B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D949E17323FBFF7E0039D67B /* Main.storyboard */; };
 		D949E17723FBFF800039D67B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D949E17623FBFF800039D67B /* Assets.xcassets */; };
 		D949E17A23FBFF800039D67B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D949E17823FBFF800039D67B /* LaunchScreen.storyboard */; };
+		D9E829A9254ADD910085378D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E829A8254ADD910085378D /* Constants.swift */; };
+		D9E829B0254AE03C0085378D /* VVButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E829AF254AE03C0085378D /* VVButton.swift */; };
+		D9E829B3254AE2880085378D /* VVAuthTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9E829B2254AE2880085378D /* VVAuthTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D949E16A23FBFF7E0039D67B /* SAP FI Quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SAP FI Quiz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D949E16D23FBFF7E0039D67B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D949E16F23FBFF7E0039D67B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D949E17123FBFF7E0039D67B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D949E17123FBFF7E0039D67B /* VVBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VVBaseViewController.swift; sourceTree = "<group>"; };
 		D949E17423FBFF7E0039D67B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D949E17623FBFF800039D67B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D949E17923FBFF800039D67B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D949E17B23FBFF800039D67B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9E829A8254ADD910085378D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D9E829AF254AE03C0085378D /* VVButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VVButton.swift; sourceTree = "<group>"; };
+		D9E829B2254AE2880085378D /* VVAuthTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VVAuthTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,50 @@
 		D949E16C23FBFF7E0039D67B /* SAP FI Quiz */ = {
 			isa = PBXGroup;
 			children = (
-				D949E16D23FBFF7E0039D67B /* AppDelegate.swift */,
+				D9E829AB254ADD9E0085378D /* Utilities */,
+				D9E829B5254AE6210085378D /* CustomViews */,
+				D9E829B6254AE6C40085378D /* Storyboards */,
+				D9AF347924F69D950053F413 /* Supporting Files */,
 				D949E16F23FBFF7E0039D67B /* SceneDelegate.swift */,
-				D949E17123FBFF7E0039D67B /* ViewController.swift */,
-				D949E17323FBFF7E0039D67B /* Main.storyboard */,
-				D949E17623FBFF800039D67B /* Assets.xcassets */,
-				D949E17823FBFF800039D67B /* LaunchScreen.storyboard */,
 				D949E17B23FBFF800039D67B /* Info.plist */,
 			);
 			path = "SAP FI Quiz";
+			sourceTree = "<group>";
+		};
+		D9AF347924F69D950053F413 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D949E16D23FBFF7E0039D67B /* AppDelegate.swift */,
+				D949E17623FBFF800039D67B /* Assets.xcassets */,
+				D949E17823FBFF800039D67B /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D9E829AB254ADD9E0085378D /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				D9E829A8254ADD910085378D /* Constants.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		D9E829B5254AE6210085378D /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				D949E17123FBFF7E0039D67B /* VVBaseViewController.swift */,
+				D9E829AF254AE03C0085378D /* VVButton.swift */,
+				D9E829B2254AE2880085378D /* VVAuthTextField.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		D9E829B6254AE6C40085378D /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				D949E17323FBFF7E0039D67B /* Main.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -94,7 +135,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1210;
 				ORGANIZATIONNAME = "Viktor Varsano";
 				TargetAttributes = {
 					D949E16923FBFF7E0039D67B = {
@@ -138,9 +179,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D949E17223FBFF7E0039D67B /* ViewController.swift in Sources */,
+				D949E17223FBFF7E0039D67B /* VVBaseViewController.swift in Sources */,
+				D9E829B3254AE2880085378D /* VVAuthTextField.swift in Sources */,
 				D949E16E23FBFF7E0039D67B /* AppDelegate.swift in Sources */,
 				D949E17023FBFF7E0039D67B /* SceneDelegate.swift in Sources */,
+				D9E829A9254ADD910085378D /* Constants.swift in Sources */,
+				D9E829B0254AE03C0085378D /* VVButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,6 +236,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -252,6 +297,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
