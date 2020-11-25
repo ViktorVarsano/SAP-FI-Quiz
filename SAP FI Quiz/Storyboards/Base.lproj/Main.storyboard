@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qyn-Zg-acQ">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aP6-93-Fgg">
+    <device id="retina3_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -14,11 +14,14 @@
             <objects>
                 <viewController id="aP6-93-Fgg" customClass="VVBaseViewController" customModule="SAP_FI_Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EMn-zS-FLv">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="nfE-oT-vey">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                            </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KND-8b-dyF" customClass="VVAuthTextField" customModule="SAP_FI_Quiz" customModuleProvider="target">
-                                <rect key="frame" x="30" y="188" width="354" height="50"/>
+                                <rect key="frame" x="30" y="188" width="260" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="XUl-f1-DjL"/>
                                 </constraints>
@@ -26,29 +29,58 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cdm-62-yVk" customClass="VVAuthTextField" customModule="SAP_FI_Quiz" customModuleProvider="target">
-                                <rect key="frame" x="30" y="268" width="354" height="50"/>
+                                <rect key="frame" x="30" y="268" width="260" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="kyC-TZ-Z36"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="swq-Qt-0ub" customClass="VVButton" customModule="SAP_FI_Quiz" customModuleProvider="target">
-                                <rect key="frame" x="186" y="712" width="42" height="30"/>
-                                <state key="normal" title=" Login"/>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="S7k-U5-PlU" userLabel="Sign In Stack View">
+                                <rect key="frame" x="0.0" y="116.5" width="320" height="247"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PDc-g7-4J3">
+                                        <rect key="frame" x="17.5" y="0.0" width="285" height="69"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <inset key="contentEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Sign in with Facebook" backgroundImage="FB">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2w9-4T-Arf">
+                                        <rect key="frame" x="17.5" y="89" width="285" height="69"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <inset key="contentEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Sign in with Google" backgroundImage="Google"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eMY-kT-n8Z">
+                                        <rect key="frame" x="17.5" y="178" width="285" height="69"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <inset key="contentEdgeInsets" minX="-10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Sign in with Email" backgroundImage="Email">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <variation key="heightClass=compact-widthClass=compact" spacing="10"/>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ndb-RG-lCC"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="KND-8b-dyF" firstAttribute="top" secondItem="ndb-RG-lCC" secondAttribute="top" constant="100" id="2sz-8s-LMD"/>
-                            <constraint firstItem="swq-Qt-0ub" firstAttribute="centerX" secondItem="EMn-zS-FLv" secondAttribute="centerX" id="960-yO-f51"/>
+                            <constraint firstItem="KND-8b-dyF" firstAttribute="top" secondItem="EMn-zS-FLv" secondAttribute="top" constant="188" id="2sz-8s-LMD"/>
+                            <constraint firstItem="S7k-U5-PlU" firstAttribute="leading" secondItem="ndb-RG-lCC" secondAttribute="leading" id="3Zu-eB-wqt"/>
                             <constraint firstItem="KND-8b-dyF" firstAttribute="leading" secondItem="ndb-RG-lCC" secondAttribute="leading" constant="30" id="BcD-7k-ANt"/>
+                            <constraint firstAttribute="trailing" secondItem="nfE-oT-vey" secondAttribute="trailing" id="CQa-4g-7Yp"/>
                             <constraint firstItem="ndb-RG-lCC" firstAttribute="trailing" secondItem="Cdm-62-yVk" secondAttribute="trailing" constant="30" id="EDv-Cf-EQK"/>
-                            <constraint firstItem="swq-Qt-0ub" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ndb-RG-lCC" secondAttribute="leading" id="OqJ-TJ-c5C"/>
-                            <constraint firstItem="ndb-RG-lCC" firstAttribute="bottom" secondItem="swq-Qt-0ub" secondAttribute="bottom" constant="120" id="ScV-au-7nA"/>
-                            <constraint firstItem="ndb-RG-lCC" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="swq-Qt-0ub" secondAttribute="trailing" id="Xhu-kC-AaO"/>
+                            <constraint firstItem="ndb-RG-lCC" firstAttribute="trailing" secondItem="S7k-U5-PlU" secondAttribute="trailing" id="IWe-xN-vrp"/>
+                            <constraint firstItem="S7k-U5-PlU" firstAttribute="centerY" secondItem="EMn-zS-FLv" secondAttribute="centerY" id="IzD-jC-xp0">
+                                <variation key="heightClass=compact-widthClass=compact" constant="20"/>
+                            </constraint>
+                            <constraint firstAttribute="bottom" secondItem="nfE-oT-vey" secondAttribute="bottom" id="J6B-Ya-Y9C"/>
                             <constraint firstItem="ndb-RG-lCC" firstAttribute="trailing" secondItem="KND-8b-dyF" secondAttribute="trailing" constant="30" id="aBM-tA-zVD"/>
+                            <constraint firstItem="nfE-oT-vey" firstAttribute="top" secondItem="EMn-zS-FLv" secondAttribute="top" id="f01-gJ-tQZ"/>
+                            <constraint firstItem="nfE-oT-vey" firstAttribute="leading" secondItem="EMn-zS-FLv" secondAttribute="leading" id="kFX-g9-EPc"/>
                             <constraint firstItem="Cdm-62-yVk" firstAttribute="leading" secondItem="ndb-RG-lCC" secondAttribute="leading" constant="30" id="ttn-Dk-QMt"/>
                             <constraint firstItem="Cdm-62-yVk" firstAttribute="top" secondItem="KND-8b-dyF" secondAttribute="bottom" constant="30" id="vrI-2T-Nus"/>
                         </constraints>
@@ -59,26 +91,12 @@
             </objects>
             <point key="canvasLocation" x="1131.8840579710145" y="75.669642857142847"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="aCz-TW-8ww">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Qyn-Zg-acQ" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="onZ-7g-Jyg">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="aP6-93-Fgg" kind="relationship" relationship="rootViewController" id="pqw-Bd-eFt"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="za9-44-id1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="221.73913043478262" y="75.669642857142847"/>
-        </scene>
     </scenes>
     <resources>
+        <image name="Background" width="414" height="896"/>
+        <image name="Email" width="285" height="69"/>
+        <image name="FB" width="285" height="69"/>
+        <image name="Google" width="285" height="69"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -26,7 +26,7 @@ class VVButton: UIButton {
         setTitleColor(Colors.vikoDarkGray, for: .normal)
         backgroundColor     = .white
         titleLabel?.font    = UIFont(name: Fonts.avenirNextMedium, size: 20)
-        layer.cornerRadius  = frame.size.height/2
+        layer.cornerRadius  = frame.size.height/2 
     }
     
     

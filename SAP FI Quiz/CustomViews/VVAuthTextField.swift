@@ -34,7 +34,7 @@ class VVAuthTextField: UITextField {
         
         let placeholder = self.placeholder != nil ? self.placeholder! : ""
         let placeholderFont = UIFont(name: Fonts.avenirNextMedium, size: 16)
-        attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [NSAttributedString.Key.foregroundColor: Colors.vikoDarkGray, NSAttributedString.Key.font: placeholderFont)
+        attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [NSAttributedString.Key.foregroundColor: Colors.vikoDarkGray, NSAttributedString.Key.font: placeholderFont as Any])
         
         let indentView = UIView(frame: CGRect(x: 0, y: 0, width: 20, height: 20))
         leftView = indentView
